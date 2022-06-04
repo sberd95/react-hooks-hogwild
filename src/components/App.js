@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Nav from "./Nav";
 import CardGrid from "./CardGrid";
 import SortFilter from "./SortFilter";
+import NewHogForm from "./NewHogForm";
 
 import hogs from "../porkers_data";
 
@@ -26,10 +27,15 @@ function App() {
 			}
 		})
 
+	function addNewHog(pig){
+		setPigCollection([...pigCollection, pig])
+	}
+
 	return (
 		<div className="App">
 			<Nav />
 			<SortFilter isGreased={isGreased} setIsGreased={setIsGreased} nameOrWeight={nameOrWeight} setNameOrWeight={setNameOrWeight}/>
+			<NewHogForm addNewHog={addNewHog}/>
 			<CardGrid pigArray={pigsToDisplay}/>
 		</div>
 	);

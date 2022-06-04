@@ -7,7 +7,7 @@ function SortFilter({ isGreased, setIsGreased, nameOrWeight, setNameOrWeight }) 
     }
 
     return (
-        <div style={{ marginBottom: '3%' }}>
+        <div style={{ marginBottom: '1%' }}>
             <label>Grease Toggle Button: </label>
             <button
                 onClick={() => setIsGreased(!isGreased)}>
